@@ -14,6 +14,8 @@
 		F703A28127B4FB1F00578301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F703A28027B4FB1F00578301 /* Assets.xcassets */; };
 		F703A28427B4FB1F00578301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F703A28227B4FB1F00578301 /* LaunchScreen.storyboard */; };
 		F703A28C27B4FBB800578301 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703A28B27B4FBB800578301 /* DateExtension.swift */; };
+		F703A28E27B4FC9A00578301 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703A28D27B4FC9A00578301 /* Location.swift */; };
+		F703A29027B4FCFD00578301 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703A28F27B4FCFD00578301 /* Map.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F703A28327B4FB1F00578301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F703A28527B4FB1F00578301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F703A28B27B4FBB800578301 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		F703A28D27B4FC9A00578301 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F703A28F27B4FCFD00578301 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		F703A26B27B4FB1C00578301 = {
 			isa = PBXGroup;
 			children = (
+				F703A28F27B4FCFD00578301 /* Map.swift */,
+				F703A28D27B4FC9A00578301 /* Location.swift */,
 				F703A28B27B4FBB800578301 /* DateExtension.swift */,
 				F703A27627B4FB1C00578301 /* Utility */,
 				F703A27527B4FB1C00578301 /* Products */,
@@ -143,7 +149,9 @@
 			files = (
 				F703A27C27B4FB1C00578301 /* ViewController.swift in Sources */,
 				F703A28C27B4FBB800578301 /* DateExtension.swift in Sources */,
+				F703A28E27B4FC9A00578301 /* Location.swift in Sources */,
 				F703A27827B4FB1C00578301 /* AppDelegate.swift in Sources */,
+				F703A29027B4FCFD00578301 /* Map.swift in Sources */,
 				F703A27A27B4FB1C00578301 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
