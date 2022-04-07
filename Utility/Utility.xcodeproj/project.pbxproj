@@ -18,6 +18,8 @@
 		F703A29027B4FCFD00578301 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703A28F27B4FCFD00578301 /* Map.swift */; };
 		F787EA6F27FE5FF60017F60F /* UILabel+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787EA6E27FE5FF60017F60F /* UILabel+Attributes.swift */; };
 		F787EA7227FE61C40017F60F /* MKMapView+Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787EA7127FE61C40017F60F /* MKMapView+Annotation.swift */; };
+		F787EA7527FE63A70017F60F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787EA7427FE63A70017F60F /* Observable.swift */; };
+		F787EA7727FE64A20017F60F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787EA7627FE64A20017F60F /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		F703A28F27B4FCFD00578301 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		F787EA6E27FE5FF60017F60F /* UILabel+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Attributes.swift"; sourceTree = "<group>"; };
 		F787EA7127FE61C40017F60F /* MKMapView+Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Annotation.swift"; sourceTree = "<group>"; };
+		F787EA7427FE63A70017F60F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		F787EA7627FE64A20017F60F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 		F703A26B27B4FB1C00578301 = {
 			isa = PBXGroup;
 			children = (
+				F787EA7827FE6B0A0017F60F /* MVVM */,
 				F787EA7027FE602B0017F60F /* Extension */,
 				F787EA7327FE61FC0017F60F /* UtilityMethod */,
 				F703A27627B4FB1C00578301 /* Utility */,
@@ -96,6 +101,15 @@
 				F703A28D27B4FC9A00578301 /* Location.swift */,
 			);
 			path = UtilityMethod;
+			sourceTree = "<group>";
+		};
+		F787EA7827FE6B0A0017F60F /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F787EA7627FE64A20017F60F /* ViewModel.swift */,
+				F787EA7427FE63A70017F60F /* Observable.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F787EA7727FE64A20017F60F /* ViewModel.swift in Sources */,
 				F703A27C27B4FB1C00578301 /* ViewController.swift in Sources */,
 				F703A28C27B4FBB800578301 /* DateExtension.swift in Sources */,
 				F703A28E27B4FC9A00578301 /* Location.swift in Sources */,
 				F787EA6F27FE5FF60017F60F /* UILabel+Attributes.swift in Sources */,
+				F787EA7527FE63A70017F60F /* Observable.swift in Sources */,
 				F787EA7227FE61C40017F60F /* MKMapView+Annotation.swift in Sources */,
 				F703A27827B4FB1C00578301 /* AppDelegate.swift in Sources */,
 				F703A29027B4FCFD00578301 /* Map.swift in Sources */,
