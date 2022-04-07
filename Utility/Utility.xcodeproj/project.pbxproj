@@ -16,6 +16,8 @@
 		F703A28C27B4FBB800578301 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703A28B27B4FBB800578301 /* DateExtension.swift */; };
 		F703A28E27B4FC9A00578301 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703A28D27B4FC9A00578301 /* Location.swift */; };
 		F703A29027B4FCFD00578301 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F703A28F27B4FCFD00578301 /* Map.swift */; };
+		F787EA6F27FE5FF60017F60F /* UILabel+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787EA6E27FE5FF60017F60F /* UILabel+Attributes.swift */; };
+		F787EA7227FE61C40017F60F /* MKMapView+Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787EA7127FE61C40017F60F /* MKMapView+Annotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		F703A28B27B4FBB800578301 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		F703A28D27B4FC9A00578301 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F703A28F27B4FCFD00578301 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		F787EA6E27FE5FF60017F60F /* UILabel+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Attributes.swift"; sourceTree = "<group>"; };
+		F787EA7127FE61C40017F60F /* MKMapView+Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Annotation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +50,8 @@
 		F703A26B27B4FB1C00578301 = {
 			isa = PBXGroup;
 			children = (
-				F703A28F27B4FCFD00578301 /* Map.swift */,
-				F703A28D27B4FC9A00578301 /* Location.swift */,
-				F703A28B27B4FBB800578301 /* DateExtension.swift */,
+				F787EA7027FE602B0017F60F /* Extension */,
+				F787EA7327FE61FC0017F60F /* UtilityMethod */,
 				F703A27627B4FB1C00578301 /* Utility */,
 				F703A27527B4FB1C00578301 /* Products */,
 			);
@@ -74,6 +77,25 @@
 				F703A28527B4FB1F00578301 /* Info.plist */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		F787EA7027FE602B0017F60F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F703A28B27B4FBB800578301 /* DateExtension.swift */,
+				F787EA6E27FE5FF60017F60F /* UILabel+Attributes.swift */,
+				F787EA7127FE61C40017F60F /* MKMapView+Annotation.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F787EA7327FE61FC0017F60F /* UtilityMethod */ = {
+			isa = PBXGroup;
+			children = (
+				F703A28F27B4FCFD00578301 /* Map.swift */,
+				F703A28D27B4FC9A00578301 /* Location.swift */,
+			);
+			path = UtilityMethod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +172,8 @@
 				F703A27C27B4FB1C00578301 /* ViewController.swift in Sources */,
 				F703A28C27B4FBB800578301 /* DateExtension.swift in Sources */,
 				F703A28E27B4FC9A00578301 /* Location.swift in Sources */,
+				F787EA6F27FE5FF60017F60F /* UILabel+Attributes.swift in Sources */,
+				F787EA7227FE61C40017F60F /* MKMapView+Annotation.swift in Sources */,
 				F703A27827B4FB1C00578301 /* AppDelegate.swift in Sources */,
 				F703A29027B4FCFD00578301 /* Map.swift in Sources */,
 				F703A27A27B4FB1C00578301 /* SceneDelegate.swift in Sources */,
