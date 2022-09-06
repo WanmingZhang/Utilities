@@ -11,7 +11,8 @@ class TableListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let imageCellId = "ImageTableCell"
-    let viewModel: EmployeeViewModel
+    
+    var viewModel: EmployeeViewModel
     
     required init?(coder: NSCoder) {
         let apiManager = EmployeeService()
@@ -61,9 +62,9 @@ extension TableListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let employee = self.viewModel.employees.value[row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: imageCellId) as? ImageTableCell {
-            cell.updateCell(with: employee)
-            return cell
+        if let imgCell = tableView.dequeueReusableCell(withIdentifier: imageCellId) as? ImageTableCell {
+            imgCell.updateCell(with: employee)
+            return imgCell
         }
         return UITableViewCell()
     }
