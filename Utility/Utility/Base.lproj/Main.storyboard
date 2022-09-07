@@ -5,20 +5,52 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Collection-->
         <scene sceneID="7T7-nQ-VSB">
             <objects>
-                <viewController id="d1v-tJ-lED" sceneMemberID="viewController">
+                <viewController id="d1v-tJ-lED" customClass="CollectionViewController" customModule="Utility" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NUo-BC-Dlw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RW8-Fp-qrQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hUW-lq-pAD">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Tyw-lE-vpT">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Auh-fB-tdI">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6PY-jA-gh2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RW8-Fp-qrQ" firstAttribute="leading" secondItem="6PY-jA-gh2" secondAttribute="leading" id="UAo-gU-31b"/>
+                            <constraint firstItem="6PY-jA-gh2" firstAttribute="trailing" secondItem="RW8-Fp-qrQ" secondAttribute="trailing" id="VIO-f7-fzb"/>
+                            <constraint firstItem="RW8-Fp-qrQ" firstAttribute="top" secondItem="6PY-jA-gh2" secondAttribute="top" id="g8q-Gl-dKE"/>
+                            <constraint firstItem="6PY-jA-gh2" firstAttribute="bottom" secondItem="RW8-Fp-qrQ" secondAttribute="bottom" id="lbL-gr-Bb4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Collection" id="Kt7-oD-vjy"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RW8-Fp-qrQ" id="WkJ-3A-hCP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbb-JX-3x8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
