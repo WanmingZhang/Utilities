@@ -22,9 +22,9 @@
 		F73DFB3928C1B0F200E97876 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DFB3828C1B0F200E97876 /* EmployeeViewModel.swift */; };
 		F73DFB3C28C1B19700E97876 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DFB3B28C1B19700E97876 /* EmployeeService.swift */; };
 		F73DFB3F28C2B0FB00E97876 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DFB3E28C2B0FB00E97876 /* Observable.swift */; };
-		F73DFB4628C5679C00E97876 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73DFB4528C5679C00E97876 /* CachedImageView.swift */; };
 		F787EA6F27FE5FF60017F60F /* UILabel+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787EA6E27FE5FF60017F60F /* UILabel+Attributes.swift */; };
 		F787EA7227FE61C40017F60F /* MKMapView+Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787EA7127FE61C40017F60F /* MKMapView+Annotation.swift */; };
+		F7B6637428C8103600D8B047 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6637328C8103600D8B047 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +45,9 @@
 		F73DFB3828C1B0F200E97876 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		F73DFB3B28C1B19700E97876 /* EmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
 		F73DFB3E28C2B0FB00E97876 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		F73DFB4528C5679C00E97876 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 		F787EA6E27FE5FF60017F60F /* UILabel+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Attributes.swift"; sourceTree = "<group>"; };
 		F787EA7127FE61C40017F60F /* MKMapView+Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Annotation.swift"; sourceTree = "<group>"; };
+		F7B6637328C8103600D8B047 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 			children = (
 				F73DFB4028C2B10100E97876 /* MVVM */,
 				F787EA7027FE602B0017F60F /* Extension */,
-				F787EA7327FE61FC0017F60F /* UtilityMethod */,
+				F787EA7327FE61FC0017F60F /* UtilityFunctions */,
 				F703A27627B4FB1C00578301 /* Utility */,
 				F703A27527B4FB1C00578301 /* Products */,
 			);
@@ -100,7 +100,6 @@
 		F73DFB3028C17DB700E97876 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F73DFB4528C5679C00E97876 /* CachedImageView.swift */,
 				F703A27B27B4FB1C00578301 /* TableListViewController.swift */,
 				F73DFB3128C17E3F00E97876 /* ImageTableCell.swift */,
 				F73DFB3228C17E3F00E97876 /* ImageTableCell.xib */,
@@ -150,13 +149,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		F787EA7327FE61FC0017F60F /* UtilityMethod */ = {
+		F787EA7327FE61FC0017F60F /* UtilityFunctions */ = {
 			isa = PBXGroup;
 			children = (
 				F703A28F27B4FCFD00578301 /* Map.swift */,
 				F703A28D27B4FC9A00578301 /* Location.swift */,
+				F7B6637328C8103600D8B047 /* ImageLoader.swift */,
 			);
-			path = UtilityMethod;
+			path = UtilityFunctions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +233,7 @@
 			files = (
 				F73DFB3F28C2B0FB00E97876 /* Observable.swift in Sources */,
 				F73DFB3628C1AAEE00E97876 /* EmployeeModel.swift in Sources */,
+				F7B6637428C8103600D8B047 /* ImageLoader.swift in Sources */,
 				F703A27C27B4FB1C00578301 /* TableListViewController.swift in Sources */,
 				F703A28C27B4FBB800578301 /* DateExtension.swift in Sources */,
 				F703A28E27B4FC9A00578301 /* Location.swift in Sources */,
@@ -244,7 +245,6 @@
 				F703A27827B4FB1C00578301 /* AppDelegate.swift in Sources */,
 				F703A29027B4FCFD00578301 /* Map.swift in Sources */,
 				F703A27A27B4FB1C00578301 /* SceneDelegate.swift in Sources */,
-				F73DFB4628C5679C00E97876 /* CachedImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

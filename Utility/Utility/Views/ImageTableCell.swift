@@ -9,10 +9,12 @@ import UIKit
 
 class ImageTableCell: UITableViewCell {
 
-    @IBOutlet weak var profileImage: CachedImageView!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var employId: UILabel!
     @IBOutlet weak var employeeName: UILabel!
     var employee: Employee?
+    let loader = ImageLoader()
+    var onReuse: () -> Void = {}
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +30,8 @@ class ImageTableCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
+        onReuse()
         self.profileImage.image = nil
     }
     
@@ -39,15 +43,24 @@ class ImageTableCell: UITableViewCell {
             return
         }
         
-        profileImage.loadImage(from: url) { [weak self] (image, error) in
+        let token = loader.loadImage(from: url) {[weak self] result in
             guard let self = self else { return }
-            guard let image = image, error == nil else {
-                return
-            }
-            DispatchQueue.main.async {
-                self.profileImage.image = image
+            do {
+              let image = try result.get()
+              DispatchQueue.main.async {
+                  self.profileImage.image = image
+              }
+            } catch {
+              // handle the error
             }
         }
         
+        onReuse = { [weak self] in
+            guard let self = self else { return }
+            if let token = token {
+                self.loader.cancelLoad(token)
+            }
+        }
+
     }
 }

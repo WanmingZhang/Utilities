@@ -11,7 +11,6 @@ protocol EmployeeServiceProtocol {
     func getEmployeeData(completion: @escaping ([Employee]?, Error?) -> Void)
 }
 
-
 class EmployeeService: EmployeeServiceProtocol {
 
     let employeeJson = """
