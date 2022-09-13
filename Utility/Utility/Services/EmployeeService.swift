@@ -189,6 +189,29 @@ class EmployeeService: EmployeeServiceProtocol {
       "message": "Successfully! All records has been fetched."
     }
     """
+    private let sourcesURLStr = "https://dummy.restapiexample.com/api/v1/employees"
+    func getEmployeeData(completion: @escaping (Result<[Employee], Error>) -> Void) {
+        guard let url = URL(string: sourcesURLStr) else {
+            return
+        }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard error == nil else {
+                completion(.failure(error!))
+                return
+            }
+            if let data = data {
+                let decoder = JSONDecoder()
+                do {
+                    let response = try decoder.decode(EmployeeResponse.self, from: data)
+                    completion(.success(response.data))
+                } catch let error {
+                    completion(.failure(error))
+                }
+            }
+ 
+        }.resume()
+    }
+    
     func getEmployeeData(completion: @escaping ([Employee]?, Error?) -> Void) {
         let data = employeeJson.data(using: .utf8)!
         let decoder = JSONDecoder()
@@ -199,23 +222,5 @@ class EmployeeService: EmployeeServiceProtocol {
             completion(nil, error)
         }
     }
-//    private let sourcesURL = URL(string: "https://dummy.restapiexample.com/api/v1/employees")!
-//    func getEmployeeData(completion: @escaping ([Employee]?, Error?) -> Void) {
-//        URLSession.shared.dataTask(with: sourcesURL) { data, response, error in
-//            guard error == nil else {
-//                completion(nil, error)
-//                return
-//            }
-//
-//            if let data = data {
-//                let decoder = JSONDecoder()
-//                do {
-//                    let employeeResponse = try decoder.decode(EmployeeResponse.self, from: data)
-//                    completion(employeeResponse.data, nil)
-//                } catch let error {
-//                    completion(nil, error)
-//                }
-//            }
-//        }.resume()
-//    }
+
 }
